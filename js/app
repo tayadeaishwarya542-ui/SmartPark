@@ -642,6 +642,8 @@ async function fetchSlotsData() {
         const response = await fetch(`${API_BASE}/api/slots`);
         if (!response.ok) throw new Error(`HTTP error ${response.status}`);
         const result = await response.json();
+        console.log('Backend response:',result);
+        console.log('API_BASE:',API_BASE);
 
         if (result.success && Array.isArray(result.slots)) {
             AppState.slots = result.slots;
