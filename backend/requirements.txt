@@ -1,0 +1,6 @@
+# SmartPark Backend Dependencies
+# Ready for Render Deployment & Local Development
+Flask>=3.0.0
+flask-cors>=4.0.0
+gunicorn>=21.2.0
+
