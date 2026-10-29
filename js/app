@@ -6,7 +6,7 @@
 
 // Dynamically determine backend API base URL
 // Supports direct Flask serving (http://127.0.0.1:5000) or Live Server (http://127.0.0.1:5500)
-const API_BASE = (window.location.protocol === 'http:' && (window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost')) ? 'http://127.0.0.1:5000' : '';
+const API_BASE = 'https://smartpark-n0nk.onrender.com';
 
 // ============================================================================
 // GITHUB PAGES / OFFLINE CLIENT-SIDE PERSISTENT STORAGE ENGINE
@@ -291,13 +291,7 @@ const SmartParkDemoStore = {
 };
 
 // Detect if environment should run client-side storage
-const isGitHubPagesOrStatic = (
-    window.location.protocol === 'file:' ||
-    window.location.hostname.includes('github.io') ||
-    window.location.hostname.endsWith('github.dev') ||
-    window.location.hostname.endsWith('gitpod.io') ||
-    (window.location.port !== '5000' && window.location.port !== '')
-);
+const isGitHubPagesOrStatic = false;
 
 
 // Application State
